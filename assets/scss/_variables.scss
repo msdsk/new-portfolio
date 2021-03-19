@@ -1,0 +1,68 @@
+/*
+# Variables
+
+The easiest way to restyle the system is by changing following variables.
+
+## Colors
+*/
+
+$primary: #56d246;
+$secondary: #fa4700;
+$black: #161616;
+$gray: #666;
+$white: #fff;
+
+/*
+If you add more colors than primary/secondary, please also update the following so they will generate text/background classes.
+*/
+
+$colors: ("primary" : $primary,
+  "secondary" : $secondary,
+  "black" : $black,
+  "gray" : $gray,
+  "white" : $white);
+
+/*
+## Font
+
+This system uses [Fluid typography](https://www.smashingmagazine.com/2016/05/fluid-typography/).
+Check [typography](/typography) section to see how it is calculated.
+*/
+$font-family: 'Latin Modern',
+sans-serif;
+$font-family-header: 'Aleo';
+$min-font-size: 18;
+$max-font-size: 25;
+
+/*
+## Grid
+
+Basic grid metrics. Note that some paddings are based on gap size.
+*/
+$columns: 12;
+$gap: 2rem;
+$gap-sm: 1.5em;
+
+/*
+## Breakpoints
+
+You can change the metrics to pixels if you really want but I would adivse against it.
+If you add more breakpoints, don't forget to add it to the following list so it will generate related grid items.
+*/
+$md: 35rem;
+$lg: 50rem;
+$breakpoints: (sm 0em $md $gap-sm,
+  md $md $lg $gap,
+  lg $lg 100vh $gap);
+
+/*
+## Minor helper variables
+Use those to assure that metrics will be more or less consistent across the board.
+*/
+
+$border-radius: .3em;
+$box-shadow: 0 .3em .7em rgba(0, 0, 0, .4);
+
+$input-padding-vertical: .7em;
+$input-padding-horizontal: 1.5em;
+$input-padding: $input-padding-vertical $input-padding-horizontal;

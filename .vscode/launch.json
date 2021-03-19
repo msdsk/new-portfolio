@@ -1,0 +1,24 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "firefox",
+      "request": "launch",
+      "name": "vuejs: firefox",
+      "url": "http://localhost:3000",
+      "webRoot": "${workspaceFolder}/src",
+      "pathMappings": [
+        {
+          "url": "webpack:///pages",
+          "path": "${workspaceFolder}/pages"
+        },
+        {
+          "url": "webpack:///src/",
+          "path": "${webRoot}/"
+        }
+      ],
+      "profile": "debug",
+      "keepProfileChanges": true
+    }
+  ]
+}
