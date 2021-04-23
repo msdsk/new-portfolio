@@ -1,0 +1,28 @@
+.cv {
+  table {
+    border: none;
+
+    thead {
+      border: none;
+    }
+
+    th {
+      position: absolute;
+      left: -1000;
+      opacity: 0;
+    }
+
+    td {
+      border: none;
+
+      &:first-child {
+        padding-left: 0;
+        width: 8em;
+      }
+
+      &:last-child {
+        padding-right: 0;
+      }
+    }
+  }
+}

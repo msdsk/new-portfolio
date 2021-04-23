@@ -39,7 +39,6 @@ export default {
         fileExtensions: ['woff2', 'woff'],
         fontFamily: 'Latin Modern',
         fontFaces: [{
-          preload: true,
           src: '@/assets/fonts/latin-modern',
           fontWeight: 400,
           fontStyle: 'normal'
@@ -52,7 +51,6 @@ export default {
         fileExtensions: ['woff2', 'woff'],
         fontFamily: 'Aleo',
         fontFaces: [{
-          preload: true,
           src: '@/assets/fonts/aleo-bold',
           fontWeight: 700,
           fontStyle: 'normal'
@@ -66,15 +64,19 @@ export default {
   },
 
   // Content module configuration (https://go.nuxtjs.dev/config-content)
-  content: {},
+  content: {
+    markdown: {
+      rehypePlugins: [
+        '~/plugins/rehype-h1.js'
+      ]
+    }
+  },
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {
-    extend(_config, { loaders }) {
+    extend(config, { loaders, isClient, isDev }) {
       variableOverride(loaders)
+      config.devtool = isClient ? 'source-map' : 'inline-source-map'
     }
-  },
-  configureWebpack: process.env.NODE_ENV !== 'production' ? {
-    devtool: 'source-map'
-  } : null
+  }
 }

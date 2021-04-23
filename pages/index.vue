@@ -26,7 +26,15 @@
         />
       </div>
     </div>
-    <lipsum />
+    <div class="container center-width container__high">
+      <nuxt-content :document="other_web" />
+    </div>
+    <div class="relative">
+      <div class="section-background"></div>
+      <div class="container center-width container__high">
+        <nuxt-content :document="cv" class="cv" />
+      </div>
+    </div>
   </div>
 </template>
 
