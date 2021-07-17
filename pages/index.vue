@@ -12,27 +12,58 @@
           <h2 class="subtitle">
             <span class="intro__span">{{ intro.subtitle }}</span>
           </h2>
+          <a href="#cv" v-scroll-to="'#cv'" class="btn intro__btn margin-top"
+            >See my cv</a
+          >
         </div>
       </div>
     </div>
     <div class="relative">
       <div class="section-background"></div>
-      <div class="container center-width projects">
+      <div class="container center-width">
         <nuxt-content :document="intro" />
-        <project-info
-          v-for="project in orderedProjects"
-          :key="project.slug"
-          :project="project"
+      </div>
+      <div class="container projects">
+        <project-info :projects="orderedProjects" />
+      </div>
+    </div>
+    <div class="container center-width container--high unbulleted-list-inside">
+      <nuxt-content :document="other_web" />
+    </div>
+    <div class="container center-width container--high">
+      <nuxt-content :document="graphic_design" />
+      <div class="grid design-grid">
+        <div class="col col--sm-0 col--md-2"></div>
+        <img
+          class="col col--md-10"
+          src="/img/projects/brochure.jpg"
+          alt="Brochure"
+        />
+        <img
+          class="col col--md-6"
+          src="/img/projects/plakat.png"
+          alt="Poster"
+        />
+        <div class="col col--sm-0 col--md-6"></div>
+        <div class="col col--sm-0 col--md-3"></div>
+        <img
+          class="col col--md-9 col--lg-7"
+          src="/img/projects/ulotka-kobiety.jpg"
+          alt="Leaflet"
+        />
+        <div class="col col--sm-0 col--md-12"></div>
+        <div class="col col--sm-0 col--md-1"></div>
+        <img
+          class="col col--md-10"
+          src="/img/projects/folder.jpg"
+          alt="Folder"
         />
       </div>
     </div>
-    <div class="container center-width container__high">
-      <nuxt-content :document="other_web" />
-    </div>
     <div class="relative">
       <div class="section-background"></div>
-      <div class="container center-width container__high">
-        <nuxt-content :document="cv" class="cv" />
+      <div class="container center-width container--high" id="cv">
+        <nuxt-content :document="cv" class="cv unbulleted-list-inside" />
       </div>
     </div>
   </div>
@@ -91,7 +122,7 @@ export default {
     object-position: center center;
   }
   &__span {
-    background: #000;
+    background: $black;
     padding: 0.1em 0.2em;
     box-decoration-break: clone;
   }
@@ -100,6 +131,19 @@ export default {
   }
   h2 {
     line-height: 1.8em;
+  }
+
+  &__btn {
+    background: $white;
+    border: 5px solid $black;
+    color: $black;
+    font-family: $font-family-header;
+    font-weight: bold;
+    text-transform: uppercase;
+    &:hover {
+      color: $black;
+      background: transparentize($white, 0.3);
+    }
   }
 
   @media (min-width: $lg) {
@@ -125,13 +169,49 @@ export default {
       margin: -2 * $gap-sm -2 * $gap-sm -4em;
     }
     &__me {
-      // width: calc(100% - 3 * #{$gap});
-      // height: calc(100% / 1.618);
       width: 100%;
       height: 100vh;
       min-width: 0;
       left: 0;
       top: 0;
+    }
+  }
+}
+
+.unbulleted-list-inside {
+  ul {
+    list-style: none;
+    margin: 0;
+  }
+  li {
+    display: inline;
+    background: $black;
+    color: $white;
+    padding: 0.15em 0.5em;
+    box-decoration-break: clone;
+    line-height: 2em;
+    text-align: center;
+    a {
+      color: $primary;
+      transition: opacity 0.2s;
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+    &:nth-child(2n) {
+      background: $secondary;
+      color: $black;
+      a {
+        color: $white;
+      }
+    }
+  }
+}
+
+.design-grid {
+  @media (min-width: $md) {
+    img:not(:first-of-type) {
+      margin-top: -20%;
     }
   }
 }
