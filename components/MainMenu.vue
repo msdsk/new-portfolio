@@ -1,5 +1,6 @@
 <template>
   <nav class="main-menu">
+    <a href="#top" v-scroll-to="'#top'">Top</a>
     <a href="#web-dev" v-scroll-to="'#web-dev'">Web dev</a>
     <a href="#graphic-design" v-scroll-to="'#graphic-design'">Graphic design</a>
     <a href="#cv" v-scroll-to="'#cv'">CV</a>
@@ -29,8 +30,24 @@ export default {}
     font-family: $font-family-header;
     font-weight: 700;
     text-transform: uppercase;
-    &:hover {
-      color: $secondary;
+    position: relative;
+    &::before {
+      content: '';
+      width: calc(100% + 1em);
+      height: 100%;
+      top: 0;
+      left: -0.5em;
+      display: block;
+      background: $secondary;
+      position: absolute;
+      mix-blend-mode: darken;
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.4s;
+      border-right: 0.3em solid $black;
+    }
+    &:hover::before {
+      transform: scaleX(1);
     }
   }
 }

@@ -1,7 +1,7 @@
 <template>
   <div>
     <main-menu />
-    <div class="relative">
+    <div class="relative" id="top">
       <div
         class="container container--high center-width intro margin-bottom-big"
       >
@@ -133,9 +133,10 @@ export default {
     font-family: $font-family-header;
     font-weight: bold;
     text-transform: uppercase;
+    font-size: 1.2em;
     &:hover {
       color: $black;
-      background: transparentize($white, 0.3);
+      background: $secondary;
     }
   }
 
@@ -214,15 +215,15 @@ export default {
         margin-top: -40%;
       }
     }
-    &:hover {
-      .paralax:not(:hover) {
-        opacity: 1;
-        filter: saturate(0.3);
-      }
-      .paralax:hover {
-        z-index: 1;
-      }
-    }
+    // &:hover {
+    //   .paralax:not(:hover) {
+    //     opacity: 1;
+    //     filter: saturate(0.3);
+    //   }
+    //   .paralax:hover {
+    //     z-index: 1;
+    //   }
+    // }
   }
 }
 </style>
