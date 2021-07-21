@@ -19,7 +19,6 @@
     "nuxt": "^2.15.4",
     "nuxt-font-loader-strategy": "^1.1.9",
     "unist-util-visit": "^2.0.3",
-    "vue-rellax": "^0.2.0",
     "vue-scrollto": "^2.20.0"
   },
   "devDependencies": {

@@ -17,12 +17,29 @@
 
       &:first-child {
         padding-left: 0;
-        width: 8em;
+        width: 7em;
       }
 
       &:last-child {
         padding-right: 0;
       }
+    }
+  }
+
+  @media (max-width: $md) {
+
+    table,
+    td,
+    tr {
+      display: block;
+    }
+
+    td {
+      padding: 0;
+    }
+
+    tr {
+      margin-bottom: 1em;
     }
   }
 }

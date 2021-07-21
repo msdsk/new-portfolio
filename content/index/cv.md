@@ -24,7 +24,7 @@
 * Gatsby
 * Redux/Vuex
 * d3.js
-* Knockout
+* Knockout.js
 * HTML/SCSS
 * jQuery, if needed
 * Webpack
@@ -53,3 +53,10 @@
 * Netlify
 * Heroku
 * Basic dev-ops on AWS
+
+
+### Languages
+
+* English — Proficient
+* Swedish — Intermediate
+* Polish — Native

@@ -1,5 +1,6 @@
 <template>
   <div>
+    <main-menu />
     <div class="relative">
       <div
         class="container container--high center-width intro margin-bottom-big"
@@ -23,41 +24,33 @@
       <div class="container center-width">
         <nuxt-content :document="intro" />
       </div>
-      <div class="container projects">
+      <div class="container projects" id="web-dev">
         <project-info :projects="orderedProjects" />
       </div>
     </div>
     <div class="container center-width container--high unbulleted-list-inside">
       <nuxt-content :document="other_web" />
     </div>
-    <div class="container center-width container--high">
+    <div class="container center-width container--high" id="graphic-design">
       <nuxt-content :document="graphic_design" />
       <div class="grid design-grid">
         <div class="col col--sm-0 col--md-2"></div>
-        <img
-          class="col col--md-10"
-          src="/img/projects/brochure.jpg"
-          alt="Brochure"
-        />
-        <img
-          class="col col--md-6"
-          src="/img/projects/plakat.png"
-          alt="Poster"
-        />
+        <paralax class="col col--md-10 design-grid--first" :speed="2">
+          <img src="/img/projects/brochure.jpg" alt="Brochure" />
+        </paralax>
+        <paralax class="col col--md-6" :speed="3">
+          <img src="/img/projects/plakat.png" alt="Poster" />
+        </paralax>
         <div class="col col--sm-0 col--md-6"></div>
-        <div class="col col--sm-0 col--md-3"></div>
-        <img
-          class="col col--md-9 col--lg-7"
-          src="/img/projects/ulotka-kobiety.jpg"
-          alt="Leaflet"
-        />
-        <div class="col col--sm-0 col--md-12"></div>
         <div class="col col--sm-0 col--md-1"></div>
-        <img
-          class="col col--md-10"
-          src="/img/projects/folder.jpg"
-          alt="Folder"
-        />
+        <paralax class="col col--md-11" :speed="1">
+          <img src="/img/projects/folder.jpg" alt="Folder" />
+        </paralax>
+        <div class="col col--sm-0 col--md-12"></div>
+        <div class="col col--sm-0 col--md-4"></div>
+        <paralax class="col col--md-5" :speed="2">
+          <img src="/img/projects/ulotka-kobiety.jpg" alt="Leaflet" />
+        </paralax>
       </div>
     </div>
     <div class="relative">
@@ -209,9 +202,26 @@ export default {
 }
 
 .design-grid {
+  pointer-events: none;
   @media (min-width: $md) {
-    img:not(:first-of-type) {
-      margin-top: -20%;
+    margin-bottom: -20%;
+    .paralax {
+      transition: opacity 0.2s, filter 0.2s;
+      img {
+        pointer-events: all;
+      }
+      &:not(.design-grid--first) {
+        margin-top: -40%;
+      }
+    }
+    &:hover {
+      .paralax:not(:hover) {
+        opacity: 1;
+        filter: saturate(0.3);
+      }
+      .paralax:hover {
+        z-index: 1;
+      }
     }
   }
 }
