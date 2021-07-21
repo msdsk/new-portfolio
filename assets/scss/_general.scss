@@ -68,4 +68,8 @@ a,
   opacity: .8;
   clip-path: polygon(0% 30%, 100% 0%, 100% 100%, 0% 100%);
   pointer-events: none;
+
+  &+* {
+    position: relative;
+  }
 }
