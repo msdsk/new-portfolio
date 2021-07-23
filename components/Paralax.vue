@@ -25,6 +25,9 @@ export default {
   },
   methods: {
     moveParallax() {
+      if (this.debounce) return
+      this.debounce = true
+      requestAnimationFrame(() => (this.debounce = false))
       this.transform =
         (this.center - window.scrollY - window.innerHeight / 2) *
         this.speed *
