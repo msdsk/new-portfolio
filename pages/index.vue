@@ -54,9 +54,15 @@
       </div>
     </div>
     <div class="relative">
-      <div class="section-background"></div>
+      <div class="section-background" />
       <div class="container center-width container--high" id="cv">
         <nuxt-content :document="cv" class="cv unbulleted-list-inside" />
+      </div>
+    </div>
+    <div class="relative">
+      <div class="section-background" />
+      <div class="container center-width container--high" id="contact">
+        <nuxt-content :document="contact" />
       </div>
     </div>
   </div>
