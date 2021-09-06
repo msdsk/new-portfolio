@@ -28,7 +28,6 @@ export default {}
     padding: 0 1em;
     display: flex;
     justify-content: space-between;
-    flex-direction: row-reverse;
     a {
       text-decoration: none;
       color: $black;
@@ -64,6 +63,7 @@ export default {}
       transform: translateY(-1.6em) rotate(-90deg);
       transform-origin: bottom right;
       right: 0;
+      flex-direction: row-reverse;
     }
   }
 }
