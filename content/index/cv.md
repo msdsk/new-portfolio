@@ -4,9 +4,10 @@
 
 | Date              | Position |
 | ------            | -------- |
-| **2018 &mdash; now**  | **This Is Deploy** &ndash; front-end developer
-| 2014 &mdash; 2018 | **SmallGIS** &ndash; graphic designer and front-end developer
-| 2013 &mdash; 2014	| **Saski** &ndash; CNC designer and operator
+| **2021 &mdash; now**| **Devies** &ndash; front-end developer
+| 2018 &mdash; 2021   | **This Is Deploy** &ndash; front-end developer
+| 2014 &mdash; 2018   | **SmallGIS** &ndash; graphic designer and front-end developer
+| 2013 &mdash; 2014	  | **Saski** &ndash; CNC designer and operator
 
 ### Education
 
