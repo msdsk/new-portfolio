@@ -2,9 +2,7 @@
   <div>
     <main-menu />
     <div class="relative" id="top">
-      <div
-        class="container container--high center-width intro margin-bottom-big"
-      >
+      <div class="container container--high center-width intro margin-bottom-big">
         <img src="/img/me.jpg" class="intro__me" />
         <div class="intro__above">
           <h1>
@@ -13,19 +11,25 @@
           <h2 class="subtitle">
             <span class="intro__span">{{ intro.subtitle }}</span>
           </h2>
-          <a href="#cv" v-scroll-to="'#cv'" class="btn intro__btn margin-top"
-            >See my cv</a
-          >
+          <a href="#cv" v-scroll-to="'#cv'" class="btn intro__btn margin-top">See my cv</a>
         </div>
       </div>
     </div>
     <div class="relative">
       <div class="section-background"></div>
-      <div class="container center-width">
-        <nuxt-content :document="intro" />
-      </div>
-      <div class="container projects" id="web-dev">
-        <project-info :projects="orderedProjects" />
+      <div id="web-dev">
+        <div class="container center-width">
+          <nuxt-content :document="consulting_intro" />
+        </div>
+        <div class="container projects">
+          <project-info :projects="orderedConsulting" />
+        </div>
+        <div class="container center-width">
+          <nuxt-content :document="intro" />
+        </div>
+        <div class="container projects">
+          <project-info :projects="orderedProjects" />
+        </div>
       </div>
     </div>
     <div class="container center-width container--high unbulleted-list-inside">
@@ -79,8 +83,11 @@ export default {
   },
   computed: {
     orderedProjects() {
-      return Object.values(this.projects).sort((a, b) => a.order - b.order)
+      return Object.values(this.projects).sort((a, b) => b.order - a.order)
     },
+    orderedConsulting() {
+      return Object.values(this.consulting).sort((a, b) => b.order - a.order)
+    }
   },
   async asyncData({ $content }) {
     const content = await $content('index', { deep: true })
@@ -126,6 +133,7 @@ export default {
     max-width: 35em;
     margin-left: auto;
   }
+
   &__me {
     position: absolute;
     height: 80%;
@@ -135,14 +143,17 @@ export default {
     left: 0;
     object-position: center center;
   }
+
   &__span {
     background: $black;
     padding: 0.1em 0.2em;
     box-decoration-break: clone;
   }
+
   h1 {
     line-height: 1.5em;
   }
+
   h2 {
     line-height: 1.8em;
   }
@@ -155,6 +166,7 @@ export default {
     font-weight: bold;
     text-transform: uppercase;
     font-size: 1.2em;
+
     &:hover {
       color: $black;
       background: $secondary;
@@ -179,10 +191,12 @@ export default {
     min-height: calc(100vh / 1.618);
     background-clip: content-box;
     padding: 2 * $gap-sm;
+
     &__above {
       font-size: 0.6em;
       margin: -2 * $gap-sm -2 * $gap-sm -4em;
     }
+
     &__me {
       width: 100%;
       height: 100vh;
@@ -198,6 +212,7 @@ export default {
     list-style: none;
     margin: 0;
   }
+
   li {
     display: inline;
     background: $black;
@@ -206,16 +221,20 @@ export default {
     box-decoration-break: clone;
     line-height: 2em;
     text-align: center;
+
     a {
       color: $primary;
       transition: opacity 0.2s;
+
       &:hover {
         opacity: 0.7;
       }
     }
+
     &:nth-child(2n) {
       background: $secondary;
       color: $black;
+
       a {
         color: $white;
       }
@@ -225,17 +244,22 @@ export default {
 
 .design-grid {
   pointer-events: none;
+
   @media (min-width: $md) {
     margin-bottom: -20%;
+
     .paralax {
       transition: opacity 0.2s, filter 0.2s;
+
       img {
         pointer-events: all;
       }
+
       &:not(.design-grid--first) {
         margin-top: -40%;
       }
     }
+
     // &:hover {
     //   .paralax:not(:hover) {
     //     opacity: 1;

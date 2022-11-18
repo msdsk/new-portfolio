@@ -2,7 +2,7 @@
 title: CSS System
 link: https://css-system-deploy.netlify.app/
 image: /img/projects/CSS.png
-order: 0
+order: 3
 ---
 
 How many times I had to copy-paste the same declarations into new projects? I can't remember. So, instead, I decided to create a neat, minimal, plug-and-play, highly customizable, no-bullshit-allowed CSS system as an own bootstrap for all future projects (like this one).

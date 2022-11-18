@@ -7,7 +7,7 @@
           <div class="project__description">
             <h3>{{ project.title }}</h3>
             <nuxt-content :document="project" />
-            <a :href="project.link" target="_blank">See it live →</a>
+            <a v-if="project.link" :href="project.link" target="_blank">See it live →</a>
           </div>
         </div>
       </paralax>
@@ -27,15 +27,18 @@ export default {
 .project {
   @media (min-width: $lg) {
     width: 80%;
+
     &__content {
       display: flex;
       align-items: center;
     }
+
     &__image {
       flex-shrink: 0;
       width: 10em;
       height: 10em;
       position: relative;
+
       &::before {
         content: '';
         position: absolute;
@@ -46,6 +49,7 @@ export default {
         top: $gap/2;
         left: -$gap/2;
       }
+
       img {
         background: $black;
         object-fit: contain;
@@ -58,19 +62,24 @@ export default {
         z-index: 1;
       }
     }
+
     &__description {
       padding-left: $gap;
       font-size: 0.7em;
     }
+
     &:nth-child(4n + 1) {
       width: 100%;
     }
+
     &:nth-child(4n + 2) {
       margin-left: 20%;
     }
+
     &:nth-child(4n + 3) {
       margin-left: 0%;
     }
+
     &:nth-child(4n) {
       margin-left: 10%;
     }
