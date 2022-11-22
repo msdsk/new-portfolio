@@ -1,8 +1,7 @@
 ---
-title: Telenor
-link: https://www.telenor.se/handla/mobilabonnemang/
-image: /img/projects/telenor.jpg
+title: Atlas Copco
+image: /img/projects/atlas.jpg
 order: 1
 ---
 
-I have been helping Telenor Sweden with day-to-day operations of their customer facing website. I have been tasked with maintaining and expanding Vue components, with a big focus on modularization through proper utilization of Vuex. I have also helped out with a gradual transformation towards using federated microservice frontend and Contentful CMS.
+Atlas Copco has been undergoing a transformation for their integrated system from a GWT-based solution to a modern, React-based fronted, within which I was tasked with creating a webpack-oriented automation environment. It offered unique challenges coming with memory limitations and a need for interoperability with a codebase spanning over a decade of code.

@@ -1,5 +1,6 @@
 ## Other web projects I worked on
 
+* [Greenmerc](https://www.greenmerc.com/en/) - Node, Nuxt; frontend and backend
 * [India Gamblers](https://indiagamblers.com) - Dato CMS, Nuxt; frontend and backend
 * [Kul i Hemmet](https://kulihemmet.se/) - Netlify CMS, Nuxt; frontend and backend
 * [Student competitions](https://tldc.toyota-forklifts.eu/) - custom CMS, vanilla JS+HTML+SCSS; frontend
