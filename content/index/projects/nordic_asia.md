@@ -3,6 +3,7 @@ title: Nordic Asia
 link: https://nordicasiagroup.com/
 image: /img/projects/NA.jpg
 order: 2
+years: 2020 &mdash; 2021
 ---
 
 Project for building a website for an investment fund that I joined (and soon after took the reins of) after the first version was released. Based on Dato CMS and Gatsby (React).

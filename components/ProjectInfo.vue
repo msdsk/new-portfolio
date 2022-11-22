@@ -5,7 +5,9 @@
         <div class="project__content">
           <div class="project__image"><img :src="project.image" alt="" /></div>
           <div class="project__description">
-            <h3>{{ project.title }}</h3>
+            <h3 class="project__title"><b>{{ project.title }}</b> <span v-html="project.years"
+                class="project__years"></span>
+            </h3>
             <nuxt-content :document="project" />
             <a v-if="project.link" :href="project.link" target="_blank">See it live →</a>
           </div>
@@ -25,6 +27,21 @@ export default {
 
 <style lang="scss">
 .project {
+
+  &__title {
+    font-weight: 400;
+    font-family: inherit;
+
+    b {
+      font-family: $font-family-header;
+    }
+  }
+
+  &__years {
+    opacity: .5;
+    font-size: .8em;
+  }
+
   @media (min-width: $lg) {
     width: 80%;
 
