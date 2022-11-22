@@ -46,8 +46,8 @@ export default {
         background: $secondary;
         width: 100%;
         height: 100%;
-        top: $gap/2;
-        left: -$gap/2;
+        top: $gap*0.5;
+        left: -$gap*0.5;
       }
 
       img {
