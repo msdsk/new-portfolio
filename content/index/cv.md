@@ -4,10 +4,10 @@
 
 | Date              | Position |
 | ------            | -------- |
-| **2021 &mdash; now**| **Devies** &ndash; JavaScript consultant
-| 2018 &mdash; 2021   | **This Is Deploy** &ndash; front-end developer and consultant
-| 2014 &mdash; 2018   | **SmallGIS** &ndash; graphic designer and front-end developer
-| 2013 &mdash; 2014	  | **Saski** &ndash; CNC designer and operator
+| 2021 &mdash; 2023 | **Devies** &ndash; JavaScript consultant
+| 2018 &mdash; 2021 | **This Is Deploy** &ndash; front-end developer and consultant
+| 2014 &mdash; 2018 | **SmallGIS** &ndash; graphic designer and front-end developer
+| 2013 &mdash; 2014 | **Saski** &ndash; CNC designer and operator
 
 ### Education
 
