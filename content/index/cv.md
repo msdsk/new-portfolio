@@ -4,6 +4,7 @@
 
 | Date              | Position |
 | ------            | -------- |
+| 2023              | **Pley** &ndash; front-end developer
 | 2021 &mdash; 2023 | **Devies** &ndash; JavaScript consultant
 | 2018 &mdash; 2021 | **This Is Deploy** &ndash; front-end developer and consultant
 | 2014 &mdash; 2018 | **SmallGIS** &ndash; graphic designer and front-end developer
@@ -13,7 +14,7 @@
 
 | Date              | School |
 | ------            | ------ |
-| 2011 &mdash; 2014 | **Koszalin University of Technology** &ndash; BD in industrial design with the specialisation in visual communication, finished with distinction
+| 2011 &mdash; 2014 | **Koszalin University of Technology** &ndash; BD in industrial design with a specialisation in visual communication, finished with distinction
 | 2013 | **Saimaa University of Applied Sciences** &ndash; Erasmus in Fine Arts
 
 ## Stuff I know
@@ -41,7 +42,7 @@
 
 ### CMS
 
-* Wordpress
+* WordPress
 * DatoCMS
 * NetlifyCMS
 * ApostropheCMS
